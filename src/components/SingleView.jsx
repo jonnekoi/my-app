@@ -9,7 +9,7 @@ const SingleView = (props) => {
 
   return (
       <>
-        <dialog className='fixed top-0 h-dvh w-dvw bg-black bg-opacity-80 text-stone-100'
+        <dialog className="fixed top-0 h-dvh w-dvw bg-black bg-opacity-50 p-4 text-stone-100"
                 open={selectedItem ? true : false}>
           <p>
             <Button text='Close' handleClick={handleClick}/>
