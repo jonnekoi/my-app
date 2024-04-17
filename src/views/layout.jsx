@@ -3,17 +3,17 @@ import {Link, Outlet} from 'react-router-dom';
 const Layout = () => (
     <div>
       <header>
-        <nav>
-          <Link to="/">Etusivu</Link>
-          <Link to="/profile">Profiili</Link>
-          <Link to='/upload'>Upload ↗</Link>
+        <nav className="flex items-center">
+          <Link className='border rounded mr-5' to="/">Etusivu</Link>
+          <Link className='border rounded mr-5' to="/profile">Profiili</Link>
+          <Link className='border rounded mr-5' to="/upload">Upload ↗</Link>
         </nav>
       </header>
       <main>
-        <Outlet />
+        <Outlet/>
       </main>
       <footer className='m-12'>
-        Copyright 2024
+        © 2024
       </footer>
     </div>
 )

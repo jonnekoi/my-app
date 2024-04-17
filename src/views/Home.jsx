@@ -42,7 +42,7 @@ const Home = () => {
   console.log(selectedItem);
   return (
       <>
-        <h2>My Media</h2>
+        <h2 className='text-2xl font-bold mb-3'>My media</h2>
         <table>
           <thead>
           <tr>

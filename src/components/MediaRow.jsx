@@ -12,7 +12,7 @@ const MediaRow = ({item}) => (
         <td>{item.filesize}</td>
         <td>{item.media_type}</td>
         <td>
-          <Link to={`/media/${item.media_id}`} state={{item}}>View Linkki</Link>
+          <Link className='border rounded' to={`/media/${item.media_id}`} state={{item}}>View Linkki</Link>
         </td>
       </tr>
 );

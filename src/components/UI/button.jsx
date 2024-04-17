@@ -4,7 +4,7 @@ const Button = props => {
   const {text, handleClick} = props;
   return (
       <button
-          className='m-3 mt-0 mb-0 p-3 rounded-lg bg-stone-500 text-stone-100'
+          className='m-3 mt-3 mb-3 p-3 rounded-lg bg-stone-500 text-stone-100'
           onClick={handleClick}>{text}</button>
   );
 };

@@ -28,7 +28,7 @@ const Upload = () => {
       text-stone-100" type="submit">Submit</button>
     </form>
     <p className="mt-12">
-      <Link to="/">Takaisin etusivulle</Link>
+      <Link className='border rounded text-white p-5' to="/">Takaisin etusivulle</Link>
     </p>
   </>;
 };
