@@ -1,32 +1,10 @@
 import MediaRow from '../components/MediaRow.jsx';
-import {useEffect, useState} from 'react';
-import {fetchData} from '../lib/fetchData.js';
+import {useMedia} from '../hooks/ApiHooks.js'
 
 const Home = () => {
   //const [selectedItem, setSelectedItem] = useState(null);
-  const [mediaArray, setMediaArray] = useState([]);
 
-  const getMedia = async ()  => {
-    const mediaResult = await fetchData(
-        import.meta.env.VITE_MEDIA_API + '/media',
-    );
-
-    const mediaWithUser = await Promise.all(mediaResult.map(async (mediaItem) => {
-      const userResult = await fetchData(import.meta.env.VITE_AUTH_API + '/users/' + mediaItem.user_id,
-          )
-      return {...mediaItem, username: userResult.username};
-    }));
-
-    console.log(mediaWithUser);
-
-    setMediaArray(mediaWithUser);
-  }
-
-  useEffect(() => {
-    getMedia();
-  }, []);
-
-  console.log(mediaArray);
+  const {mediaArray} = useMedia();
   return (
       <>
         <h2 className='text-2xl font-bold mb-3'>My media</h2>
