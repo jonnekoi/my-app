@@ -7,6 +7,7 @@ const Layout = () => (
           <Link className='border rounded mr-5' to="/">Etusivu</Link>
           <Link className='border rounded mr-5' to="/profile">Profiili</Link>
           <Link className='border rounded mr-5' to="/upload">Upload ↗</Link>
+          <Link className='border rounded mr-5' to="/login">Login</Link>
         </nav>
       </header>
       <main>
