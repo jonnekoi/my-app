@@ -15,7 +15,7 @@ const MediaRow = ({item}) => (
         <td>{item.media_type}</td>
         <td>
           <Link className='border rounded' to={`/media/${item.media_id}`} state={{item}}>View</Link>
-          <Likes id={item.media_id} />
+          <Likes id={item.media_id}/>
         </td>
       </tr>
 );

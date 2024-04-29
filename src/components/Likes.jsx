@@ -1,6 +1,12 @@
 import PropTypes from 'prop-types';
 import {useEffect, useState} from 'react';
 import {useLike} from '../hooks/ApiHooks.js';
+import {
+  Heart,
+  HeartDislike,
+  HeartDislikeOutline,
+  HeartOutline,
+} from 'react-ionicons';
 
 const Likes = ({id}) => {
 
@@ -53,9 +59,13 @@ const Likes = ({id}) => {
   };
 
   return (
-      <div className='flex justify-around m-auto items-center'>
+      <div className='flex justify-around m-auto items-center p-2'>
         <p>{likeCount}</p>
-        <button className='m-3 mt-3 mb-3 p-3 rounded-lg bg-stone-500 text-stone-100' onClick={handleLike}>{userLike ? 'Dislike' : 'Like'}</button>
+        { userLike ?
+        <HeartDislikeOutline color={'#ffffff'} beat onClick={handleLike}></HeartDislikeOutline>
+            :
+        <HeartOutline color={'#ffffff'} beat onClick={handleLike}></HeartOutline>
+        }
       </div>
       );
 };
