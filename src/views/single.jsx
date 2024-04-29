@@ -5,8 +5,6 @@ const Single = () => {
   const location = useLocation()
   const params = useParams()
   const navigate = useNavigate()
-  console.log("params", params)
-  console.log("location", location)
 
   if(!location.state?.item){
     return null;

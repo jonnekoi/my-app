@@ -10,14 +10,11 @@ export const UserProvider = ({ children }) => {
   const navigate = useNavigate();
   const { getUserByToken } = useUser();
 
-  console.log("user in UserProvider", user)
-
   const handleLogin = async (credentials) => {
     console.log("credentials", credentials);
     console.log({ credentials });
     try {
       const userData = await login(credentials);
-      console.log('userData', userData);
       localStorage.setItem('token', userData.token);
       setUser(userData.user)
       navigate('/');

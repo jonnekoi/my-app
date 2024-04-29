@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import {Link} from 'react-router-dom';
+import Likes from './Likes.jsx';
 
 const MediaRow = ({item}) => (
       <tr key={item.media_id}>
@@ -14,6 +15,7 @@ const MediaRow = ({item}) => (
         <td>{item.media_type}</td>
         <td>
           <Link className='border rounded' to={`/media/${item.media_id}`} state={{item}}>View</Link>
+          <Likes id={item.media_id} />
         </td>
       </tr>
 );

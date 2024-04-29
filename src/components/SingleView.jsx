@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import Button from './UI/button.jsx';
+import Likes from './Likes.jsx';
 
 const SingleView = (props) => {
   const {selectedItem, setSelectedItem} = props;
@@ -31,6 +32,7 @@ const SingleView = (props) => {
                 <p>{selectedItem.description}</p>
                 <p>Created: {new Date(selectedItem.created_at).toLocaleString()}</p>
                 <p>Size: {selectedItem.filesize}</p>
+                <Likes id={selectedItem.media_id} />
               </>
           )}
         </dialog>
